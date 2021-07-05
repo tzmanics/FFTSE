@@ -1,17 +1,13 @@
 <div class="days-list">
   <ul class="days">
-    <li *ngFor="let day of days">
+    <li *ngFor="let day of days" (click)="onSelect(day)">
       <h1>{{ day.name }}</h1>
       <h2>{{ day.date | uppercase }}</h2>
       <div class="day-images">
         <img *ngFor="let image of day.images" [src]="image" />
       </div>
       <div class="day-thoughts">
-        <input
-          id="thoughts"
-          [(ngModel)]="day.thoughts"
-          placeholder="Today's thoughts..."
-        />
+        <p>{{ day.thoughts }}</p>
       </div>
       <div class="day-booleans">
         <h3>meditated: {{ day.hasMeditated }}</h3>
@@ -19,4 +15,30 @@
       </div>
     </li>
   </ul>
+</div>
+<div *ngIf="selectedDay" class="selected-day">
+  <h2>{{ selectedDay.name }} | {{ selectedDay.date }}</h2>
+  <input
+    id="thoughts"
+    [(ngModel)]="selectedDay.thoughts"
+    placeholder="Today's thoughts..."
+  />
+  <div class="meditated-check">
+    <label>meditated?:</label>
+    <input
+      id="meditated"
+      type="checkbox"
+      value="{{ selectedDay.hasMeditated }}"
+      [(ngModel)]="selectedDay.hasMeditated"
+    />
+  </div>
+  <div class="workout-check">
+    <label>worked out?:</label>
+    <input
+      id="workout"
+      type="checkbox"
+      value="{{ selectedDay.hasWorkedOut }}"
+      [(ngModel)]="selectedDay.hasWorkedOut"
+    />
+  </div>
 </div>
