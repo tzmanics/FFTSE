@@ -3,7 +3,7 @@ export interface Day {
   name: string;
   date: string;
   images: string[];
-  thought: string;
+  thoughts: string;
   hasMeditated: boolean;
   hasWorkedOut: boolean;
 }

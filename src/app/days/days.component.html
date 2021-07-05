@@ -1,6 +1,18 @@
-<h1>{{ day.name }}</h1>
-<h1>{{ day.date }}</h1>
-<img [src]="day.images[0]" />
-<p>{{ day.thought }}</p>
-<h3>meditated: {{ day.hasMeditated }}</h3>
-<h3>worked out: {{ day.hasWorkedOut }}</h3>
+<div>
+  <h1>{{ day.name }}</h1>
+  <h2>{{ day.date | uppercase }}</h2>
+  <div>
+    <img [src]="day.images[0]" />
+  </div>
+  <div>
+    <input
+      id="thoughts"
+      [(ngModel)]="day.thoughts"
+      placeholder="Today's thoughts..."
+    />
+  </div>
+  <div>
+    <h3>meditated: {{ day.hasMeditated }}</h3>
+    <h3>worked out: {{ day.hasWorkedOut }}</h3>
+  </div>
+</div>
