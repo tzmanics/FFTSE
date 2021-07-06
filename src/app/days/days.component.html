@@ -16,29 +16,4 @@
     </li>
   </ul>
 </div>
-<div *ngIf="selectedDay" class="selected-day">
-  <h2>{{ selectedDay.name }} | {{ selectedDay.date }}</h2>
-  <input
-    id="thoughts"
-    [(ngModel)]="selectedDay.thoughts"
-    placeholder="Today's thoughts..."
-  />
-  <div class="meditated-check">
-    <label>meditated?:</label>
-    <input
-      id="meditated"
-      type="checkbox"
-      value="{{ selectedDay.hasMeditated }}"
-      [(ngModel)]="selectedDay.hasMeditated"
-    />
-  </div>
-  <div class="workout-check">
-    <label>worked out?:</label>
-    <input
-      id="workout"
-      type="checkbox"
-      value="{{ selectedDay.hasWorkedOut }}"
-      [(ngModel)]="selectedDay.hasWorkedOut"
-    />
-  </div>
-</div>
+<app-day-detail [day]="selectedDay"></app-day-detail>

@@ -1,0 +1,26 @@
+<div *ngIf="day" class="day-detail">
+  <h2>{{ day.name }} | {{ day.date }}</h2>
+  <input
+    id="thoughts"
+    [(ngModel)]="day.thoughts"
+    placeholder="Today's thoughts..."
+  />
+  <div class="meditated-check">
+    <label>meditated?:</label>
+    <input
+      id="meditated"
+      type="checkbox"
+      value="{{ day.hasMeditated }}"
+      [(ngModel)]="day.hasMeditated"
+    />
+  </div>
+  <div class="workout-check">
+    <label>worked out?:</label>
+    <input
+      id="workout"
+      type="checkbox"
+      value="{{ day.hasWorkedOut }}"
+      [(ngModel)]="day.hasWorkedOut"
+    />
+  </div>
+</div>
