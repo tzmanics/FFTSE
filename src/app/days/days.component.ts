@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Day } from '../day';
-import { DAYS } from '../mock-days';
+import { DayService } from '../day.service';
 
 @Component({
   selector: 'app-days',
@@ -9,9 +9,15 @@ import { DAYS } from '../mock-days';
   styleUrls: ['./days.component.css'],
 })
 export class DaysComponent implements OnInit {
-  days = DAYS;
+  days: Day[] = [];
 
-  constructor() {}
+  constructor(private dayService: DayService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getDays();
+  }
+
+  getDays(): void {
+    this.dayService.getDays().subscribe((days) => (this.days = days));
+  }
 }

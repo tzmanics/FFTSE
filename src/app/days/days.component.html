@@ -1,17 +1,15 @@
 <div class="days-list">
   <ul class="days">
     <li *ngFor="let day of days">
-      <h1>{{ day.name }}</h1>
+      <a routerLink="/day/{{ day.date }}">
+        <h1>{{ day.name }}</h1></a
+      >
       <h2>{{ day.date | uppercase }}</h2>
       <div class="day-images">
         <img *ngFor="let image of day.images" [src]="image" />
       </div>
       <div class="day-thoughts">
-        <input
-          id="thoughts"
-          [(ngModel)]="day.thoughts"
-          placeholder="Today's thoughts..."
-        />
+        <p>{{ day.thoughts }}</p>
       </div>
       <div class="day-booleans">
         <h3>meditated: {{ day.hasMeditated }}</h3>

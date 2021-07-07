@@ -4,7 +4,7 @@ export const DAYS: Day[] = [
   {
     id: 1,
     name: 'Monday',
-    date: '5 July 2021',
+    date: '5-July-2021',
     images: [
       'https://bit.ly/3ApfOCQ',
       'https://bit.ly/3xj5cDs',
@@ -18,7 +18,7 @@ export const DAYS: Day[] = [
   {
     id: 2,
     name: 'Tuesday',
-    date: '6 July 2021',
+    date: '6-July-2021',
     images: [
       'https://bit.ly/3xj5cDs',
       'https://bit.ly/3qLAmkx',
@@ -32,7 +32,7 @@ export const DAYS: Day[] = [
   {
     id: 3,
     name: 'Wednesday',
-    date: '7 July 2021',
+    date: '7-July-2021',
     images: [
       'https://bit.ly/3qLAmkx',
       'https://bit.ly/3ApfOCQ',
