@@ -14,4 +14,9 @@ export class DayService {
     const days = of(DAYS);
     return days;
   }
+
+  getDay(date: string): Observable<Day> {
+    const day = DAYS.find((d) => d.date === date)!;
+    return of(day);
+  }
 }

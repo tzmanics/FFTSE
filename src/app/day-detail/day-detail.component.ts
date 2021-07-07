@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Day } from '../day';
+import { DayService } from '../day.service';
 
 @Component({
   selector: 'app-day-detail',
@@ -10,7 +13,22 @@ import { Day } from '../day';
 export class DayDetailComponent implements OnInit {
   @Input() day?: Day;
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private dayService: DayService,
+    private location: Location
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getDay();
+  }
+
+  getDay(): void {
+    const date = this.route.snapshot.paramMap.get('date') || '';
+    this.dayService.getDay(date).subscribe((day) => (this.day = day));
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
