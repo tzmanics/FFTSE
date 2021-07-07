@@ -1,7 +1,9 @@
 <div class="days-list">
   <ul class="days">
-    <li *ngFor="let day of days" (click)="onSelect(day)">
-      <h1>{{ day.name }}</h1>
+    <li *ngFor="let day of days">
+      <a routerLink="/day/{{ day.date }}">
+        <h1>{{ day.name }}</h1></a
+      >
       <h2>{{ day.date | uppercase }}</h2>
       <div class="day-images">
         <img *ngFor="let image of day.images" [src]="image" />
@@ -16,4 +18,3 @@
     </li>
   </ul>
 </div>
-<app-day-detail [day]="selectedDay"></app-day-detail>

@@ -10,13 +10,8 @@ import { DAYS } from '../mock-days';
 })
 export class DaysComponent implements OnInit {
   days = DAYS;
-  selectedDay?: Day;
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onSelect(day: Day): void {
-    this.selectedDay = day;
-  }
 }
