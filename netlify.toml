@@ -1,7 +1,7 @@
 [build]
   command = "ng build"
   functions = "netlify/functions"
-  publish = "dist/fftse"
+  publish = "dist/FFTSE"
 
 [[redirects]]
   from = "/*"
