@@ -4,17 +4,7 @@
       <a routerLink="/day/{{ day.date }}">
         <h1>{{ day.name }}</h1></a
       >
-      <h2>{{ day.date | uppercase }}</h2>
-      <div class="day-images">
-        <img *ngFor="let image of day.images" [src]="image" />
-      </div>
-      <div class="day-thoughts">
-        <p>{{ day.thoughts }}</p>
-      </div>
-      <div class="day-booleans">
-        <h3>meditated: {{ day.hasMeditated }}</h3>
-        <h3>worked out: {{ day.hasWorkedOut }}</h3>
-      </div>
+      <h3>{{ day.date | uppercase }}</h3>
     </li>
   </ul>
 </div>

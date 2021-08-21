@@ -1,0 +1,30 @@
+.day-list: {
+  margin: 0 auto;
+  width: 90%;
+}
+.days {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: white;
+  border: 1px solid black;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  height: 170px;
+  margin: 20px;
+  max-height: 170px;
+  max-width: 170px;
+  padding: 10px;
+  width: 170px;
+}
