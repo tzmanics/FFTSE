@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  padding: 0;
+}
+body {
+  background: url('https://static.vecteezy.com/system/resources/previews/002/248/315/original/terrazzo-flooring-pattern-background-terrazzo-seamless-pattern-vector.jpg') no-repeat   center center fixed;
+  background-size: cover;
+  background-position: center;
+}
